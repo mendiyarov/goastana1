@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Куда сходить в Астане</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+<!-- Шапка -->
+<header class="header">
+    <div class="header-inner">
+        <div class="header-left">
+            <div class="logo">Go<span>Astana</span></div>
+
+            <button class="city-btn">
+                <span class="city-icon">📍</span>
+                <span>Астана</span>
+                <span class="city-arrow">▾</span>
+            </button>
+        </div>
+
+        <div class="header-right">
+            <select class="lang-select">
+                <option>Русский</option>
+                <option>Қазақша</option>
+                <option>English</option>
+            </select>
+
+            <button class="profile-btn">
+                <span class="profile-icon">👤</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Навигация: Билеты / Афиша / Места / Журнал -->
+<nav class="main-nav">
+    <button class="nav-link active">Билеты</button>
+    <button class="nav-link">Афиша</button>
+    <button class="nav-link">Места</button>
+    <button class="nav-link">Журнал</button>
+</nav>
+
+<main class="page">
+    <!-- Фильтры по датам: Сегодня / На этой неделе / ... -->
+    <section class="date-filters">
+        <button class="date-card active">
+            <div class="date-card-title">Сегодня</div>
+            <div class="date-card-subtitle" id="today-label">13 ноября</div>
+        </button>
+        <button class="date-card">
+            <div class="date-card-title">На этой неделе</div>
+            <div class="date-card-subtitle">10–16 ноября</div>
+        </button>
+        <button class="date-card">
+            <div class="date-card-title">На выходных</div>
+            <div class="date-card-subtitle">15–16 ноября</div>
+        </button>
+        <button class="date-card">
+            <div class="date-card-title">В этом месяце</div>
+            <div class="date-card-subtitle">Ноябрь</div>
+        </button>
+    </section>
+
+    <!-- Слайдер карточек мероприятий -->
+    <section class="events-section">
+        <div class="events-row">
+            <!-- Карточка 1 -->
+            <article class="event-card">
+                <div class="event-image">
+                    <span class="age-label">0-0-4</span>
+                    <button class="favorite-btn">♡</button>
+                    <img src="images/a8b80ebf25c32aa8c926839e58ece9e8.jpg" alt="ABIK Jeksen">
+                </div>
+                <div class="event-info">
+                    <div class="event-tags">
+                        <span>🎫 Билеты</span>
+                        <span>🎵 Выставка</span>
+                    </div>
+                    <h3 class="event-title">Digital bridge 2025 с Павлом Дуровым</h3>
+                    <p class="event-meta">
+                        от 5000 ₸ • 9 декабря, 10:00<br>
+                        Международный выстовочный центр
+                    </p>
+                </div>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="event-card">
+                <div class="event-image">
+                    <span class="age-label">0-0-4</span>
+                    <button class="favorite-btn">♡</button>
+                    <img src="images/images.jpg" alt="Концерт Темирлана">
+                </div>
+                <div class="event-info">
+                    <div class="event-tags">
+                        <span>🎫 Билеты</span>
+                        <span>🎤 Концерт</span>
+                    </div>
+                    <h3 class="event-title">Сольный концерт Тимати </h3>
+                    <p class="event-meta">
+                        от 15000 ₸ • 28 ноября, 19:00<br>
+                        Барыс Арена
+                    </p>
+                </div>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="event-card">
+                <div class="event-image">
+                    <span class="age-label">0-0-4</span>
+                    <button class="favorite-btn">♡</button>
+                    <img src="images/1532-1.jpg" alt="Тройной стендап">
+                </div>
+                <div class="event-info">
+                    <div class="event-tags">
+                        <span>🎫 Билеты</span>
+                        <span>🎤 Спектакль</span>
+                    </div>
+                    <h3 class="event-title">
+                        Волшебный спектакль Щелкунчик
+                    </h3>
+                    <p class="event-meta">
+                        от 10000 ₸ • 20-30 декабря, 19:00<br>
+                        Астана Опера 20-30 декабря
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Блок "Давай сходим" + календарь + поиск -->
+    <section class="calendar-section">
+        <div class="calendar-header">
+            <h2>Давай Сходим</h2>
+            <button class="city-small-btn">
+                📍 Астана ▾
+            </button>
+        </div>
+
+        <div class="calendar-controls">
+            <div class="month-label">Ноябрь</div>
+            <div class="search-box">
+                <input type="text" placeholder="Поиск впечатлений">
+            </div>
+        </div>
+
+        <!-- Простой календарь-лента -->
+        <div class="calendar-strip">
+            <div class="calendar-day">
+                <div class="calendar-weekday">ЧТ</div>
+                <div class="calendar-date">14</div>
+            </div>
+            <div class="calendar-day">
+                <div class="calendar-weekday">ПТ</div>
+                <div class="calendar-date">15</div>
+            </div>
+            <div class="calendar-day active">
+                <div class="calendar-weekday">СБ</div>
+                <div class="calendar-date">16</div>
+            </div>
+            <div class="calendar-day">
+                <div class="calendar-weekday">ВС</div>
+                <div class="calendar-date">17</div>
+            </div>
+            <div class="calendar-day">
+                <div class="calendar-weekday">ПН</div>
+                <div class="calendar-date">18</div>
+            </div>
+            <div class="calendar-day">
+                <div class="calendar-weekday">ВТ</div>
+                <div class="calendar-date">19</div>
+            </div>
+            <div class="calendar-day">
+                <div class="calendar-weekday">СР</div>
+                <div class="calendar-date">20</div>
+            </div>
+            <!-- можно добавить ещё дней -->
+        </div>
+    </section>
+</main>
+
+<button class="chat-btn">💬</button>
+
+<script src="app.js"></script>
+
+</body>
+</html>

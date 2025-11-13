@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f3f4f6;
+    color: #0f172a;
+}
+
+/* Шапка */
+
+.header {
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #1d4ed8; /* тёмно-синий акцент */
+}
+
+.city-btn {
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.city-icon {
+    font-size: 16px;
+}
+
+.city-arrow {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lang-select {
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 6px 10px;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+.profile-btn {
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 6px 10px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.profile-icon {
+    font-size: 18px;
+}
+
+/* Навигация */
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 16px 0;
+    display: flex;
+    gap: 16px;
+}
+
+.nav-link {
+    border: none;
+    background: transparent;
+    padding: 10px 4px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    color: #6b7280;
+}
+
+.nav-link.active {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #1d4ed8; /* подчёркивание тёмно-синее */
+    border-radius: 999px;
+}
+
+/* Основная страница */
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Фильтры по датам */
+
+.date-filters {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+}
+
+.date-card {
+    min-width: 150px;
+    padding: 10px 12px;
+    border-radius: 16px;
+    background: #f9fafb;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.date-card-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.date-card-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.date-card.active {
+    background: #ffffff;
+    border-color: #1d4ed8;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* Секция карточек */
+
+.events-section {
+    margin-top: 12px;
+}
+
+.events-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.event-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 999px;
+    border: none;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* информация карточки */
+
+.event-info {
+    padding: 14px 16px 16px;
+}
+
+.event-tags {
+    display: flex;
+    gap: 6px;
+    font-size: 11px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.event-tags span {
+    background: #0f172a;
+    border-radius: 999px;
+    padding: 3px 9px;
+}
+
+.event-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.event-meta {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Календарь */
+
+.calendar-section {
+    margin-top: 24px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 16px 14px 18px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.calendar-header h2 {
+    font-size: 20px;
+}
+
+.city-small-btn {
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 4px 10px;
+    background: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.month-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-box {
+    flex: 1;
+}
+
+.search-box input {
+    width: 100%;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.calendar-strip {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-top: 4px;
+}
+
+.calendar-day {
+    min-width: 44px;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 12px;
+    background: #f3f4f6;
+    font-size: 12px;
+}
+
+.calendar-weekday {
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.calendar-date {
+    font-weight: 600;
+}
+
+.calendar-day.active {
+    background: #1d4ed8;
+    color: #ffffff;
+}
+
+/* Кнопка чата */
+
+.chat-btn {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    border-radius: 999px;
+    border: none;
+    padding: 12px 14px;
+    font-size: 20px;
+    background: #1d4ed8;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.6);
+}
+
+/* Адаптивность */
+
+@media (max-width: 600px) {
+    .header-inner {
+        padding: 8px 12px;
+    }
+
+    .page {
+        padding: 12px;
+    }
+
+    .events-row {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-section {
+        padding: 14px 10px 16px;
+    }
+}
